@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Basic_Programs;
 using SampleProgram1;
 using Tasks;
 
@@ -53,10 +54,11 @@ namespace SampleProgram1
 
             //book.DisplayDetails();
 
-            Book book1 = new(101, "Java", " JK", true);
-            Book book2 = new(102, "C#", "Sanjay", true);
-            Book book3 = new(103, "Angular", "Harsha", false);
-            Book book4 = new(104, ".Net", "Yogesh", true);
+            /*
+            Book book1 = new(101, "The Love", " jj", true);
+            Book book2 = new(102, "The Thunder", "ll", true);
+            Book book3 = new(103, "The Avenger", "aa", false);
+            Book book4 = new(104, "Infinity Wars", "bb", true);
 
             Library.book.Add(book1);
             Library.book.Add(book2);
@@ -90,12 +92,24 @@ namespace SampleProgram1
                 {
                     break;
                 }
-            }
-
-
-
 
 
             }
+
+            */
+
+
+            //SampleArray s = new SampleArray();
+
+            //s.disp1d();
+
+           // CollectionExamples s = new CollectionExamples();
+
+           // s.AddNewElement();
+           // Console.WriteLine(s.FindAnElement());
+
+            LinqDemo l = new LinqDemo();
+            l.ShowResults();
+        }
         }
 }
