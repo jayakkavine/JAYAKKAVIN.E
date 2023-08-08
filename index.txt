@@ -1,0 +1,14 @@
+HI Jayakkavin
+
+Modified
+
+git init
+git status
+git add index.txt
+git commit -m "First Commit"
+
+git push origin master
+
+git add -A // to add all the files
+
+Java Script - https://www.youtube.com/watch?v=PkZNo7MFNFg

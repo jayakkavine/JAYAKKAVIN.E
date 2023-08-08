@@ -1,0 +1,29 @@
+use payoda - to Create DB
+db.createCollection("Employee"); - To create collection or Table
+ db.Employees.insertOne({name : "JK"});
+ db.Employees.insertMany([{name : "Sanjay"},{name:"Yogesh"},{name: "Harsha"}]); - To insert many use array of elements
+ db.Employees.find();
+ db.Employees.find({name:"JK"});
+ db.Employees.find({},{name:1}); // This is an projection statement if we give 0 no column will be selected .
+ db.Employees.updateOne({name:"JK"},{$set:{name:"JK 17"}});
+ 
+ db.Employees.updateOne({name:"JK 17"},{$set:{name:"JK"}},{upsert:true});// Insert and update it. if the value is not exists.
+ db.Employees.updateMany({name:"JK"},{$set:{name:"JK 17"}},{upsert:true});
+ db.Employees.deleteOne({name : "JK 17"}); 
+ db.Employees.deleteMany({name : "JK 17"});
+ db.Employees.deleteMany({}); // Delete all the value in collection.
+ 
+ 
+ 
+ 
+ db.users.insert({name:"JK", age:23, email:"jk@yopmail.com", isActive:true});
+ db.users.find({age:{$gt:20}}); // to find age greater than 20
+ db.users.find({age:{$gt:20}},{name:1});
+ db.users.find({age:{$gt:20}},{_id:0,name:1,age:1});
+ db.users.find({age:{$gt : 22}, isActive:true}); // And Condition
+ db.users.find({age: {$in:[20,22]}}); // In
+ db.users.find({age:{$gt:21,$lt:23}}); // Between 
+ db.users.find({$or:[{age:{$gt:22}}, {isActive:false}]}); // OR condition
+ 
+ To use greater than equal use "gte"
+ 

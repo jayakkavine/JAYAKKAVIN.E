@@ -1,0 +1,11 @@
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\bin\Debug\netcoreapp2.1\SampleBank.deps.json
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\bin\Debug\netcoreapp2.1\SampleBank.runtimeconfig.json
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\bin\Debug\netcoreapp2.1\SampleBank.runtimeconfig.dev.json
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\bin\Debug\netcoreapp2.1\SampleBank.dll
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\bin\Debug\netcoreapp2.1\SampleBank.pdb
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\obj\Debug\netcoreapp2.1\SampleBank.csprojAssemblyReference.cache
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\obj\Debug\netcoreapp2.1\SampleBank.csproj.CoreCompileInputs.cache
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\obj\Debug\netcoreapp2.1\SampleBank.AssemblyInfoInputs.cache
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\obj\Debug\netcoreapp2.1\SampleBank.AssemblyInfo.cs
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\obj\Debug\netcoreapp2.1\SampleBank.dll
+D:\Training\Phase 2\Training\Training 1\SampleBank\SampleBank\obj\Debug\netcoreapp2.1\SampleBank.pdb

@@ -1,0 +1,24 @@
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.deps.json
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.runtimeconfig.json
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.runtimeconfig.dev.json
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.dll
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.pdb
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.csproj.CoreCompileInputs.cache
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.AssemblyInfoInputs.cache
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.AssemblyInfo.cs
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.dll
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.pdb
+D:\Training\Phase 2\Training\Training 1\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.csprojAssemblyReference.cache
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.deps.json
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.runtimeconfig.json
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.runtimeconfig.dev.json
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.dll
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\bin\Debug\netcoreapp2.1\SampleProgram.pdb
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.csproj.AssemblyReference.cache
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.GeneratedMSBuildEditorConfig.editorconfig
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.AssemblyInfoInputs.cache
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.AssemblyInfo.cs
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.csproj.CoreCompileInputs.cache
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.dll
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.pdb
+E:\JAYAKKAVIN.E-master\SampleProgram\SampleProgram\obj\Debug\netcoreapp2.1\SampleProgram.genruntimeconfig.cache

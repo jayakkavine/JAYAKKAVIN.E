@@ -1,0 +1,11 @@
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\bin\Debug\netcoreapp2.1\SampleLibrary.deps.json
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\bin\Debug\netcoreapp2.1\SampleLibrary.runtimeconfig.json
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\bin\Debug\netcoreapp2.1\SampleLibrary.runtimeconfig.dev.json
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\bin\Debug\netcoreapp2.1\SampleLibrary.dll
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\bin\Debug\netcoreapp2.1\SampleLibrary.pdb
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\obj\Debug\netcoreapp2.1\SampleLibrary.csprojAssemblyReference.cache
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\obj\Debug\netcoreapp2.1\SampleLibrary.csproj.CoreCompileInputs.cache
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\obj\Debug\netcoreapp2.1\SampleLibrary.AssemblyInfoInputs.cache
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\obj\Debug\netcoreapp2.1\SampleLibrary.AssemblyInfo.cs
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\obj\Debug\netcoreapp2.1\SampleLibrary.dll
+D:\Training\Phase 2\Training\Training 1\SampleLibrary\SampleLibrary\obj\Debug\netcoreapp2.1\SampleLibrary.pdb
