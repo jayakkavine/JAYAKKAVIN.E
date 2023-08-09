@@ -103,13 +103,35 @@ namespace SampleProgram1
 
             //s.disp1d();
 
-           // CollectionExamples s = new CollectionExamples();
+            // CollectionExamples s = new CollectionExamples();
 
-           // s.AddNewElement();
-           // Console.WriteLine(s.FindAnElement());
+            // s.AddNewElement();
+            // Console.WriteLine(s.FindAnElement());
 
-            LinqDemo l = new LinqDemo();
-            l.ShowResults();
+            //  LinqDemo l = new LinqDemo();
+            //l.ShowResults();
+
+            ExceptionHandling e = new ExceptionHandling(27, 3,17);
+
+           // Console.WriteLine(e.Add());
+            //Console.WriteLine(e.Mul());
+            //Console.WriteLine(e.Sub());
+
+
+
+            try
+            {
+                Console.WriteLine(e.Div());
+                e.CheckAge();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+
+
+
         }
-        }
+    }
 }
