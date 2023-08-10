@@ -111,7 +111,7 @@ namespace SampleProgram1
             //  LinqDemo l = new LinqDemo();
             //l.ShowResults();
 
-            ExceptionHandling e = new ExceptionHandling(27, 3,17);
+            ExceptionHandling e = new ExceptionHandling(27, 0,17);
 
            // Console.WriteLine(e.Add());
             //Console.WriteLine(e.Mul());

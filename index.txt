@@ -12,3 +12,16 @@ git push origin master
 git add -A // to add all the files
 
 Java Script - https://www.youtube.com/watch?v=PkZNo7MFNFg
+
+
+
+DESKTOP-052IKRS\SQLEXPRESS
+
+
+
+Scaffold-DbContext "data source = DESKTOP-052IKRS\SQLEXPRESS; initial catalog = EmployeeDB; integrated security=SSPI; 
+TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+add-migration createDB
+update-database

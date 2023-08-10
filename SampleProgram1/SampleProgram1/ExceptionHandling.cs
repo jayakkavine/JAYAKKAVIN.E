@@ -43,11 +43,11 @@ namespace SampleProgram1
             return Ans;
         }
 
-        public void CheckAge()
+        public void CheckAge() 
         {
             if(Age < 18 )
             {
-                throw new ArithmeticException("Not Eligible to Vote");
+                throw new AgeException();
             }
             else
             {
@@ -66,7 +66,7 @@ namespace SampleProgram1
             else
             {
                 Ans = 0;
-                throw new ArithmeticException("Trying to Divide by 0");
+                throw new DivException("Trying to Divide by 0");
             }
             
 
