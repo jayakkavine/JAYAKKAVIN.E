@@ -3430,11 +3430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\JAYAKKAVIN.E-master\\EF Core\\EFCF\\EFCF.csproj",
+      "projectUniqueName": "E:\\JAYAKKAVIN.E-master\\Phase 2\\EF Core\\EFCF\\EFCF.csproj",
       "projectName": "EFCF",
-      "projectPath": "E:\\JAYAKKAVIN.E-master\\EF Core\\EFCF\\EFCF.csproj",
+      "projectPath": "E:\\JAYAKKAVIN.E-master\\Phase 2\\EF Core\\EFCF\\EFCF.csproj",
       "packagesPath": "C:\\Users\\Jayakkavin\\.nuget\\packages\\",
-      "outputPath": "E:\\JAYAKKAVIN.E-master\\EF Core\\EFCF\\obj\\",
+      "outputPath": "E:\\JAYAKKAVIN.E-master\\Phase 2\\EF Core\\EFCF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

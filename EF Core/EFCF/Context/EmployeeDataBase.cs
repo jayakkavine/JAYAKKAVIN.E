@@ -14,7 +14,6 @@ namespace EFCF.Context
 
         public DbSet<Emp> Emps { get; set; }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("data source = DESKTOP-052IKRS\\SQLEXPRESS; " +
