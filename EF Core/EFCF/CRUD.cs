@@ -20,7 +20,7 @@ namespace EFCF
             {
                 var dept = new Dept()
                 {
-                    DeptNo = 1,
+                    DeptNo = 8,
                     DeptName = "M.Sc Software Systems"
                 };
 

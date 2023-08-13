@@ -25,3 +25,29 @@ TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir
 
 add-migration createDB
 update-database
+
+
+dotnet tool install --global dotnet-ef
+
+
+data source = .\\SQLEXPRESS; initial catalog = Student; integrated security=SSPI; \nTrustServerCertificate=True;
+
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+1. create using asp .net web api
+2. Create Models folder - create class and property
+3. Create Context folder - use DbContext interface and create the constructor for it.
+4. In Appsetting Json file insert the configuration sqlserver or connection string.
+5.	install asp .net core, design, tool, sqlserver.
+6. in terminal install dotnet tool install --global dotnet-ef
+7. move to directory.
+7.1. in program.cs file see the changes
+8. push the code.
+
+
+
+Scaffold-DbContext "data source = .\SQLEXPRESS; initial catalog = EmployeeDB; integrated security=SSPI; 
+TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models

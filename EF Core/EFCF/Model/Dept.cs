@@ -18,5 +18,6 @@ namespace EFCF.Model
         public string? DeptName { get; set;}
 
         public ICollection<Emp>? Employees { get; set; }
+
     }
 }

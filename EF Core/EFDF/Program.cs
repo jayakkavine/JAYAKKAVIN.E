@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Design.Internal;
 using EFDF;
+using EFCF;
 
 namespace EFDF
 {
@@ -11,6 +12,11 @@ namespace EFDF
             //crud.AddNewDept();
             //crud.UpdateDept();
             crud.DeleteDept();
+
+            CRUDEmployee crudeployee = new CRUDEmployee();
+            crudeployee.AddNewDept();
+
+
         }
     }
 }
