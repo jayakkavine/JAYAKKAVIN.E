@@ -58,7 +58,6 @@ namespace StudentDetails.Controllers
         }
 
         [HttpPut]
-
         public async Task<ActionResult<Student>> UpdateStudent(int Roll_No, Student student)
         {
             

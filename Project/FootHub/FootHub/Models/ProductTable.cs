@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace FootHub.Models;
 
@@ -18,4 +19,10 @@ public partial class ProductTable
     public int TotalStock { get; set; }
 
     public string PImage { get; set; } = null!;
+    [JsonIgnore]
+    public virtual ICollection<CartTable> CartTables { get; set; } = new List<CartTable>();
+    [JsonIgnore]
+    public virtual ICollection<OrderLinkTable> OrderLinkTables { get; set; } = new List<OrderLinkTable>();
+    [JsonIgnore]
+    public virtual ICollection<ProductLinkTable> ProductLinkTables { get; set; } = new List<ProductLinkTable>();
 }

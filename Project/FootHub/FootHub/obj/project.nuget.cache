@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Ts8roauA+nhYqykVg24nzn9bv1X9LwmncdUKV7tPWYpx/1DaRKBONMenhLDawt8Py7TFu59Nm/IpBGxsw56Z/g==",
+  "dgSpecHash": "OeQExtFwcqYJiv4x2GCc6yI/FRvx4P2NIKG0HDbUWDdcW+gzbw7O7+HhzHrbk7nm9SAa3rHibmfw98ILx0ICig==",
   "success": true,
   "projectFilePath": "E:\\JAYAKKAVIN.E-master\\Phase 2\\Project\\FootHub\\FootHub\\FootHub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jayakkavin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Jayakkavin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Jayakkavin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Jayakkavin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.10\\microsoft.aspnetcore.authentication.jwtbearer.7.0.10.nupkg.sha512",
     "C:\\Users\\Jayakkavin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.9\\microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "C:\\Users\\Jayakkavin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Jayakkavin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

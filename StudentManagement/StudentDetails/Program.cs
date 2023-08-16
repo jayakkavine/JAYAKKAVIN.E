@@ -22,6 +22,7 @@ builder.Services.AddDbContext<StudentContext>(
     );
 
 
+
 builder.Services.AddScoped<IStudent,StudentService>();
 
 

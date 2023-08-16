@@ -8,6 +8,7 @@ E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\FootHub.
 E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\Azure.Core.dll
 E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\Azure.Identity.dll
 E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\Humanizer.dll
+E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 E:\JAYAKKAVIN.E-master\Phase 2\Project\FootHub\FootHub\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
