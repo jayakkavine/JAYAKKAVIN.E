@@ -3,6 +3,7 @@ using FootHub.Contexts;
 using FootHub.Models;
 using FootHub.Services.Interface;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace FootHub.Services.ServiceClass
 {
@@ -21,6 +22,7 @@ namespace FootHub.Services.ServiceClass
             await _context.SaveChangesAsync();
             return await _context.UserTables.ToListAsync();
         }
+
 
         public async Task<List<UserTable>> RemoveUser(int Roll_No)
         {
@@ -89,8 +91,9 @@ namespace FootHub.Services.ServiceClass
         }
 
 
-        public async Task<ProductTable> GetProductBySearch(string product)
+        public async Task<List<ProductTable>> GetProductBySearch(string product)
         {
+            /*
             var responce = (from b in _context.BrandTables
                             from c in _context.CategoryTables
                             from o in _context.OcassionTables
@@ -100,9 +103,21 @@ namespace FootHub.Services.ServiceClass
                             where ((b.BName.Equals(product))
                             || (c.CName.Equals(product)) || (o.OName.Equals(product)) || (p.TName.Equals(product)))
                             select b.BName);
-            return (ProductTable)responce;
+            */
+
+
+
+            var response = _context.ProductTables.Where(pr => _context.ProductLinkTables.Where(p => _context.OcassionTables
+                                                        .Where(o => o.OName == product)
+                                                        .Select(o => o.OId)
+                                                        .Contains(p.OId))
+                                                        .Select(pr => pr.OId)
+                                                        .Contains(pr.PId)).ToList();
+
+            return response;
 
         }
+
 
     }
 }

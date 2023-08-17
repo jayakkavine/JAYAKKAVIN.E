@@ -49,5 +49,12 @@ dotnet ef database update
 
 
 
-Scaffold-DbContext "data source = .\SQLEXPRESS; initial catalog = Student; integrated security=SSPI; 
+Scaffold-DbContext "data source = .\SQLEXPRESS; initial catalog = FootHub; integrated security=SSPI; 
 TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+
+
+https://www.youtube.com/watch?v=lTOQ7Fjhcvk
+
+https://www.youtube.com/watch?v=AJl_ufe60tg

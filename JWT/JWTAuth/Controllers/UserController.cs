@@ -44,7 +44,41 @@ namespace JWTAuth.Controllers
             }
         }
 
+        [HttpPut]
+        public async Task<ActionResult<User>> UpdateUser(string Roll_No, User user)
+        {
 
+            try
+            {
+                var students = await _user.UpdateUser(Roll_No, user);
+
+                return Ok(students);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+        }
+
+
+        [HttpDelete]
+
+        public async Task<ActionResult<List<User>>> RemoveUser(string Roll_No)
+        {
+
+            try
+            {
+                var students = await _user.RemoveUser(Roll_No);
+
+                return Ok(students);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+        }
 
     }
 }

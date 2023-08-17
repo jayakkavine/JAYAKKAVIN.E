@@ -23,7 +23,7 @@ namespace FootHub.Services.Interface
 
         Task<List<OrderLinkTable>> GetOrderLink(int o_id);
 
-        Task<ProductTable> GetProductBySearch(string product);
+        Task<List<ProductTable>> GetProductBySearch(string product);
 
     }
 }
