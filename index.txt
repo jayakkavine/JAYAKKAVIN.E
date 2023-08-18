@@ -58,3 +58,20 @@ TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir
 https://www.youtube.com/watch?v=lTOQ7Fjhcvk
 
 https://www.youtube.com/watch?v=AJl_ufe60tg
+
+
+npm install -g typescript
+
+npm install -g @angular/cli@latest
+
+ng version
+ng new FirstProject
+
+ng serve
+ng serve -o
+
+
+
+ng g c servers - to create component
+
+npm install --save bootstrap

@@ -5,6 +5,7 @@ use FootHub;
 create table OcassionTable(
 	o_id int not null identity(1,1),
 	o_name nvarchar(25) not null,
+	isAvailable int not null,
 	constraint ocassion_pri primary key (o_id),
 	constraint ocassion_unique unique (o_id,o_name)
 );
@@ -12,6 +13,7 @@ create table OcassionTable(
 create table ProductType(
 	t_id int not null identity(1,1),
 	t_name nvarchar(25) not null,
+	isAvailable int not null,
 	constraint type_pri primary key (t_id),
 	constraint productType_unique unique (t_id,t_name)
 );
@@ -19,27 +21,24 @@ create table ProductType(
 create table BrandTable(
 	b_id int not null identity(1,1),
 	b_name nvarchar(25) not null,
+	isAvailable int not null,
 	constraint brand_pri primary key (b_id),
 	constraint brand_unique unique (b_id,b_name)
-);
-
-create table CategoryTable(
-	c_id int not null identity(1,1),
-	c_name nvarchar(25) not null,
-	constraint category_pri primary key (c_id),
-	constraint category_unique unique (c_id,c_name)
 );
 
 create table UserTable(
 	u_id int not null identity(1,1),
 	u_name nvarchar(25) not null,
 	u_email nvarchar(30) not null,
-	u_password nvarchar(10) not null,
+	u_password nvarchar(15) not null,
 	u_phone nvarchar(10) not null,
-	role nvarchar(10) not null,
+	u_role nvarchar(10) not null,
+	isAvailable int not null,
 	constraint user_pri primary key (u_id),
 	constraint user_unique unique (u_id,u_email,u_phone)
 );
+
+drop table ProductTable;
 
 create table ProductTable(
 	p_id int not null identity(1,1),
@@ -49,24 +48,15 @@ create table ProductTable(
 	price int not null,
 	total_stock int not null,
 	p_image nvarchar(100) not null,
-	constraint product_pri primary key (p_id),
-	constraint product_unique unique (p_id,p_name,size)
-);
-
-create table ProductLinkTable(
-	product_link int not null identity(1,1),
-	p_id int not null,
 	o_id int not null,
 	t_id int not null,
 	b_id int not null,
-	c_id int not null,
-	constraint product_link_pri primary key (product_link),
-	constraint productLink_unique unique (p_id,o_id,t_id,b_id,c_id),
-	constraint product_fore foreign key (p_id) references ProductTable(p_id),
+	category_name nvarchar(25) not null,
+	constraint product_pri primary key (p_id),
+	constraint product_unique unique (p_id,o_id,t_id,b_id,p_name,size),
 	constraint ocassion_fore foreign key (o_id) references OcassionTable(o_id),
 	constraint type_fore foreign key (t_id) references ProductType(t_id),
 	constraint brand_fore foreign key (b_id) references BrandTable(b_id),
-	constraint category_fore foreign key (c_id) references CategoryTable(c_id)
 );
 
 create table OrderTable(

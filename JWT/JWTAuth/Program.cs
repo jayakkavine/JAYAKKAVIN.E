@@ -22,7 +22,11 @@ internal class Program
                 builder.Configuration.GetConnectionString("SQLServerConnection"))
             );
 
+        builder.Services.AddScoped<IUser, UserService>();
+
         builder.Services.AddScoped<IStudent, StudentService>();
+
+        builder.Services.AddScoped<IToken, TokenService>();
 
         var app = builder.Build();
 
@@ -34,6 +38,8 @@ internal class Program
         }
 
         app.UseHttpsRedirection();
+
+        app.UseAuthentication();
 
         app.UseAuthorization();
 

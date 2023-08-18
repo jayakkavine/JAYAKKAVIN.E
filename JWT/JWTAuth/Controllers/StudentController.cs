@@ -1,5 +1,6 @@
 ﻿using JWTAuth.Models;
 using JWTAuth.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace JWTAuth.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class StudentController : ControllerBase
     {
         public IStudent _student;
@@ -75,7 +77,7 @@ namespace JWTAuth.Controllers
         }
 
         [HttpDelete]
-
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<Student>>> DeleteStudent(int Roll_No)
         {
 

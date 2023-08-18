@@ -10,10 +10,12 @@ namespace JWTAuth.Controllers
     public class UserController : ControllerBase
     {
         private IUser _user;
+        private IToken _tokenGenerator;
 
-        public UserController(IUser user)
+        public UserController(IUser user, IToken tokenGenerator)
         {
             _user = user;
+            _tokenGenerator = tokenGenerator;
         }
 
         [HttpGet]
@@ -22,6 +24,8 @@ namespace JWTAuth.Controllers
             try
             {
                 var user = await _user.GetUserByName(username);
+                var token = _tokenGenerator.GenerateToken(user.userName, user.Role);
+                Console.WriteLine(token);
                 return Ok(user);
             }
             catch(Exception ex)
@@ -30,12 +34,13 @@ namespace JWTAuth.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("UserPost")]
         public async Task<ActionResult<List<User>>> AddUser(User user)
         {
             try
             {
                 var users = await _user.AddUser(user);
+
                 return Ok(users);
             }
             catch (Exception ex)
@@ -79,6 +84,8 @@ namespace JWTAuth.Controllers
             }
 
         }
+
+
 
     }
 }

@@ -24,7 +24,7 @@ namespace JWTAuth.Services.ServiceClass
 
         public async Task<User> GetUserByName(string username)
         {
-            return await _context.Users.FindAsync(username);
+            return await _context.Users.FirstOrDefaultAsync(x => x.userName == username);
         }
 
         public async Task<List<User>> RemoveUser(string userName)

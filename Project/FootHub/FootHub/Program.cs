@@ -27,6 +27,8 @@ builder.Services.AddScoped<ICrud, CRUDServiceClass>();
 
 builder.Services.AddScoped<IUser, UserService>();
 
+builder.Services.AddScoped<IDashBoard, DashBoradServiceClass>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

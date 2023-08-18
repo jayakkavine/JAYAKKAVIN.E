@@ -1,0 +1,53 @@
+<h1>List of Servers</h1>
+<!--
+<ol>
+    <li class="text-success">
+        {{s1}}
+    </li>
+    <li class="text-danger">
+        {{s2}}
+    </li>
+</ol>
+-->
+
+<!-- <p>{{ "Server with number" }} {{ serverId }} is currently {{ serverStatus }}</p> -->
+
+<p>
+  {{ "Server with number" }} {{ getServerId() }} is currently
+  {{ getServerStatus() }}
+</p>
+
+<label>Server Name: </label>
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onServerNameEntry($event)"
+/><br /><br /> -->
+
+<p>{{serverName}}</p>
+
+<!-- [(ngModule)] -->
+<input type="text" [(ngModel)]="serverName"/><br><br>
+
+<button
+  class="btn btn-primary"
+  [disabled]="!addNewServer"
+  (click)="onServerCreation()"
+>
+  Add new Server
+</button>
+<!-- <p>{{ serverCreated }}</p> -->
+
+<!-- <p *ngIf = "serverCreated == 'Created'">{{serverCreated}}</p> -->
+
+<p *ngFor="let server of serverList">{{server}}</p>
+
+<p *ngIf="serverCreated == 'Created'; else beforeServer">{{serverCreated}}</p>
+
+<ng-template #beforeServer>
+    <p>{{serverCreated}}</p>
+</ng-template>
+
+<!-- <p>{{addNewServer}} with string interpolation</p> -->
+
+<p [innerText]="addNewServer"></p>
