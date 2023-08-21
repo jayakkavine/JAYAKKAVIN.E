@@ -64,6 +64,7 @@ npm install -g typescript
 
 npm install -g @angular/cli@latest
 
+
 ng version
 ng new FirstProject
 
@@ -75,3 +76,5 @@ ng serve -o
 ng g c servers - to create component
 
 npm install --save bootstrap
+
+ng g c templateforms

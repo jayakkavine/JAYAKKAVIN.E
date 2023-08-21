@@ -51,3 +51,16 @@
 <!-- <p>{{addNewServer}} with string interpolation</p> -->
 
 <p [innerText]="addNewServer"></p>
+
+
+<!-- <div *ngFor="let num of serverNumbers; let i = index" [ngStyle]="{backgroundColor : i == 0 ? 'lightblue' : 'lightgreen'}">
+    <p>
+      server with {{num}} {{getServerId()}} is currently {{getServerStatus()}}
+    </p>
+</div> -->
+<div *ngFor="let num of serverNumbers">
+<p [ngStyle] = "{'background-color' : getColor()}"
+[ngClass]="{online : serverStatus=='Online'}">
+  Server With number {{getServerId()}} is currently {{getServerStatus()}}
+</p>
+</div>

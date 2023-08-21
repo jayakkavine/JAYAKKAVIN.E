@@ -15,9 +15,9 @@ export class ServersComponent {
 
   serverName: string = '';
 
-  serverList =['SQl','Oracle'];
+  serverList =['SQl','Oracle', 'C#'];
 
-
+  serverNumbers = [101, 102, 103];
 
   // onServerNameEntry(event:Event)
   // {
@@ -29,7 +29,16 @@ export class ServersComponent {
     setTimeout(() => {
       this.addNewServer = true;
     }, 5000);
+
+    
   }
+
+  getColor()
+  {
+    this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
+    return this.serverStatus == 'Online' ? 'green' : 'red';
+  }
+
 
   onServerCreation() {
     this.serverCreated = 'Created';

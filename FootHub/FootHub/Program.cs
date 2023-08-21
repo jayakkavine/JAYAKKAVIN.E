@@ -1,5 +1,8 @@
 using FootHub.Context;
+using FootHub.Services.Interface;
+using FootHub.Services.ServiceClass;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +21,12 @@ builder.Services.AddDbContext<FootHubContext>(
         builder.Configuration.GetConnectionString("SQLServerConnection")
     )
 );
+
+builder.Services.AddScoped<ICrud, CRUDServiceClass>();
+
+builder.Services.AddScoped<IUser, UserService>();
+
+builder.Services.AddScoped<IDashBoard, DashBoradServiceClass>();
 
 
 

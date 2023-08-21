@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace FootHub.Models;
 
@@ -18,10 +19,10 @@ public partial class UserTable
     public string URole { get; set; } = null!;
 
     public int IsAvailable { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<CartTable> CartTables { get; set; } = new List<CartTable>();
-
+    [JsonIgnore]
     public virtual ICollection<OrderLinkTable> OrderLinkTables { get; set; } = new List<OrderLinkTable>();
-
+    [JsonIgnore]
     public virtual ICollection<OrderTable> OrderTables { get; set; } = new List<OrderTable>();
 }

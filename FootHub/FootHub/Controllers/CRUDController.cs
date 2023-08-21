@@ -131,62 +131,6 @@ namespace FootHub.Controllers
         }
 
 
-        [HttpPost("CategoryTable")]
-        public async Task<ActionResult<List<CategoryTable>>> AddCategory(CategoryTable category)
-        {
-            var ocassions = await _icrud.AddCategory(category);
-            if (ocassions == null)
-            {
-                return NotFound();
-            }
-            return Ok(ocassions);
-        }
-
-        [HttpGet("CategoryTable")]
-        public async Task<ActionResult<List<CategoryTable>>> GetCategory()
-        {
-            var ocassions = await _icrud.GetCategory();
-            if (ocassions == null)
-            {
-                return NotFound();
-            }
-            return Ok(ocassions);
-        }
-
-        [HttpPut("CategoryTable")]
-        public async Task<ActionResult<CategoryTable>> UpdateCategory(int o_id, CategoryTable category)
-        {
-
-            try
-            {
-                var ocassions = await _icrud.UpdateCategory(o_id, category);
-
-                return Ok(ocassions);
-            }
-            catch (Exception ex)
-            {
-                return NotFound(ex.Message);
-            }
-
-        }
-
-        [HttpDelete("CategoryTable")]
-        public async Task<ActionResult<List<CategoryTable>>> RemoveCategory(int o_id)
-        {
-
-            try
-            {
-                var ocassions = await _icrud.RemoveCategory(o_id);
-
-                return Ok(ocassions);
-            }
-            catch (Exception ex)
-            {
-                return NotFound(ex.Message);
-            }
-
-        }
-
 
         [HttpPost("ProductTable")]
         public async Task<ActionResult<List<OcassionTable>>> AddProduct(ProductTable product)
@@ -299,18 +243,6 @@ namespace FootHub.Controllers
                 return NotFound(ex.Message);
             }
 
-        }
-
-
-        [HttpPost("ProductLinkTable")]
-        public async Task<ActionResult<List<ProductType>>> AddProductLink(ProductLinkTable ocassion)
-        {
-            var ocassions = await _icrud.AddProductLink(ocassion);
-            if (ocassions == null)
-            {
-                return NotFound();
-            }
-            return Ok(ocassions);
         }
 
     }

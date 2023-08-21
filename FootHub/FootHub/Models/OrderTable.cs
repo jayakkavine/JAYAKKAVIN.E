@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace FootHub.Models;
 
@@ -16,8 +17,8 @@ public partial class OrderTable
     public int Price { get; set; }
 
     public string OrderDate { get; set; } = null!;
-
+    [JsonIgnore]
     public virtual ICollection<OrderLinkTable> OrderLinkTables { get; set; } = new List<OrderLinkTable>();
-
+    [JsonIgnore]
     public virtual UserTable UIdNavigation { get; set; } = null!;
 }

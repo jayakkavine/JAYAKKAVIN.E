@@ -1,0 +1,106 @@
+<p>templateforms works!</p>
+
+<form #contactForms="ngForm" (ngSubmit)="onSubmit(contactForms)">
+  <p>
+    <label for="firstname"> FirstName : </label>
+    <input
+      type="text"
+      id="firstname"
+      name="firstname"
+      [(ngModel)]="contact.firstname"
+    />
+  </p>
+  <p>
+    <label for="lastname"> LastName : </label>
+    <input
+      type="text"
+      id="lastname"
+      name="lastname"
+      [(ngModel)]="contact.lastname"
+    />
+  </p>
+  <p>
+    <label for="email"> Email : </label>
+    <input type="email" id="email" name="email" [(ngModel)]="contact.email" />
+  </p>
+  <p>
+    <label for="gender"> Gender : </label>
+    <input
+      type="radio"
+      value="male"
+      id="gender"
+      name="gender"
+      [(ngModel)]="contact.gender"
+    />Male
+    <input
+      type="radio"
+      value="female"
+      id="gender"
+      name="gender"
+      [(ngModel)]="contact.gender"
+    />Female
+  </p>
+  <p>
+    <label for="isMarried"> Married : </label>
+    <input
+      type="checkbox"
+      id="isMarried"
+      name="isMarried"
+      [(ngModel)]="contact.isMarried"
+    />
+  </p>
+
+  <div ngModelGroup="address">
+    <p>
+      <label for="city">City</label>
+      <!-- <input type="text" name="city" ngModel /> -->
+      <input
+        type="text"
+        id="city"
+        name="city"
+        [(ngModel)]="contact.address.city"
+      />
+    </p>
+    <p>
+      <label for="street">Street</label>
+      <!-- <input type="text" name="street" ngModel /> -->
+      <input
+        type="text"
+        id="street"
+        name="street"
+        [(ngModel)]="contact.address.street"
+      />
+    </p>
+    <p>
+      <label for="pincode">Pin Code</label>
+      <!-- <input type="text" name="pincode" ngModel /> -->
+      <input
+        type="text"
+        id="pincode"
+        name="pincode"
+        [(ngModel)]="contact.address.pincode"
+      />
+    </p>
+  </div>
+  <label for="country">country </label>
+  <select name="country" id="country" [(ngModel)]="contact.country">
+    <option [ngValue]="c.id" *ngFor="let c of countryList">
+      {{ c.name }}
+    </option>
+  </select>
+
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+
+  <p>
+    <button type="button" (click)="setDefaults()">Set Defaults</button>
+    <button type="button" (click)="reset(contactForms)">Reset</button>
+  </p>
+
+  <pre>Value: {{ contactForms.value | json }}</pre>
+  <pre>Valid: {{ contactForms.valid }}</pre>
+  <pre>Touched: {{ contactForms.touched }}</pre>
+  <pre>Submitted: {{ contactForms.submitted }}</pre>
+  <pre>Dirty: {{ contactForms.dirty }}</pre>
+</form>
