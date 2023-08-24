@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+
+<div class="content">
+    <div class="container" *ngFor="let d of temp">
+        <a href="Product display.html" class="btn btn-secondary back-button">&lt; Back to Products</a>
+        <h2>Product Details</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="assets/images/{{d.pImage}}" alt="Product Image" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h4>{{d.pName}}</h4>
+                <p>{{d.pDisc}}</p>
+                <p><strong>Price:</strong>{{d.price}}</p>
+                <p><strong>Size:</strong> {{d.size}}</p>
+                <p><strong>Brand:</strong> {{brand_name}}</p>
+                <p><strong>Type:</strong> {{product_type}}</p>
+                <p><strong>Ocassion:</strong> {{occasion_name}}</p>
+                <button type="button" class="btn btn-primary">Order</button>
+                <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footers></app-footers>

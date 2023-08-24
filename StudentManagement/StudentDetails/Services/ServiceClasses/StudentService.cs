@@ -47,6 +47,21 @@ namespace StudentDetails.Services.ServiceClasses
                return response;
         }
 
+        public async Task<List<Student>> GetStudent(int[] student)
+        { 
+
+            var response = _studentContext.Students.Where(e => student.Contains(e.Roll_No)).ToList();
+
+            if (response == null)
+            {
+                throw new Exception(StudentDetailsException.ExceptionMessage[0]);
+            }
+            else
+            {
+                return response;
+            }
+        }
+
         public async Task<Student> GetStudentById(int Roll_No)
         {
             var response = await _studentContext.Students.FindAsync(Roll_No);//(x => x.Roll_No == Roll_No)

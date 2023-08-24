@@ -57,6 +57,17 @@ namespace StudentDetails.Controllers
             return Ok(students);
         }
 
+        [HttpPost("Get")]
+        public async Task<ActionResult<List<Student>>> GetStudent(int[] student)
+        {
+            var students = await _student.GetStudent(student);
+            if (students == null)
+            {
+                return NotFound();
+            }
+            return Ok(students);
+        }
+
         [HttpPut]
         public async Task<ActionResult<Student>> UpdateStudent(int Roll_No, Student student)
         {

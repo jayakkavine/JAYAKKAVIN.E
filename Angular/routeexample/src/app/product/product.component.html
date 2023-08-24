@@ -10,9 +10,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let product of products;">
-                <td>{{product.name}}</td>
-                <td><a [routerLink]="['detail',product.name]">{{product.name}} </a> </td>
-                <td>{{product.name}}</td>
+                <td>{{product.productID}}</td>
+                <td><a [routerLink]="['detail',product.productID]">{{product.name}} </a> </td>
+                <td>{{product.price}}</td>
             </tr>
         </tbody>
     </table>

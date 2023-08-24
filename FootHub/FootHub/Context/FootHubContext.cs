@@ -164,7 +164,7 @@ public partial class FootHubContext : DbContext
             entity.Property(e => e.OId).HasColumnName("o_id");
             entity.Property(e => e.PDisc)
                 .HasMaxLength(250)
-                .HasColumnName("p_disc");
+                .HasColumnName("p_desc");
             entity.Property(e => e.PImage)
                 .HasMaxLength(100)
                 .HasColumnName("p_image");

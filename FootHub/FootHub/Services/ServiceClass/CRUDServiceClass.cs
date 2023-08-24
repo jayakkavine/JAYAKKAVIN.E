@@ -24,7 +24,7 @@ namespace FootHub.Services.ServiceClass
 
         public async Task<List<OcassionTable>> GetOcassions()
         {
-            var response = _context.OcassionTables.Where(o => o.IsAvailable == 1).ToList();
+            var response = await _context.OcassionTables.Where(o => o.IsAvailable == 1).ToListAsync();
             return response;
         }
 

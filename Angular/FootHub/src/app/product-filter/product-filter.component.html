@@ -1,14 +1,17 @@
-<h1>Product List</h1>
-<div class='table-responsive'>
-        <tbody>
-            <div *ngFor="let product of products;">
-            <label>
-                <input type ="checkbox" (change)="filterProducts($event)" [id]="product.name">
-                        {{product.name}}
-            </label>
-        </div>
-            <button>Apply</button>
-        </tbody>
+<p>product-filter works!</p>
+
+
+<div *ngFor="let product of data">
+  <label>
+    <input type="checkbox" (change)="filterProducts($event)" [id]="product.roll_No">
+    {{product.student_name}}
+  </label>
 </div>
- 
-<router-outlet></router-outlet>
+<div *ngFor = "let p of temp" >
+  {{p.student_name}}
+  {{p.address}}
+  {{p.phone}}
+</div>
+<div>
+  <button (click)="getFilterDatas()">Apply</button>
+</div>

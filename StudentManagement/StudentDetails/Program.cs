@@ -26,6 +26,16 @@ builder.Services.AddDbContext<StudentContext>(
 builder.Services.AddScoped<IStudent,StudentService>();
 
 
+builder.Services.AddCors(Options =>
+{
+    Options.AddPolicy("CorsPolicy", bluider =>
+    {
+        bluider.AllowAnyHeader();
+        bluider.AllowAnyMethod();
+        bluider.AllowAnyOrigin();
+    });
+});
+
 //My code ends here
 var app = builder.Build();
 
@@ -37,6 +47,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 

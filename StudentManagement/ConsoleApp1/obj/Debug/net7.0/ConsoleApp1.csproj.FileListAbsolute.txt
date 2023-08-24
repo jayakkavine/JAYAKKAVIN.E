@@ -1,0 +1,15 @@
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.exe
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.deps.json
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.runtimeconfig.json
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.dll
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.pdb
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.csproj.AssemblyReference.cache
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.AssemblyInfoInputs.cache
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.AssemblyInfo.cs
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.dll
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\refint\ConsoleApp1.dll
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.pdb
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.genruntimeconfig.cache
+E:\JAYAKKAVIN.E-master\Phase 2\StudentManagement\ConsoleApp1\obj\Debug\net7.0\ref\ConsoleApp1.dll

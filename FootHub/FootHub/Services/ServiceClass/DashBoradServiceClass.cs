@@ -14,9 +14,9 @@ namespace FootHub.Services.ServiceClass
             _context = context;
         }
 
-        public Task<List<ProductTable>> GetListOfProduct(int c_id)
+        public async Task<List<ProductTable>> GetListOfProduct(int c_id)
         {
-            throw new NotImplementedException();
+            return await _context.ProductTables.ToListAsync();
         }
     }
 }

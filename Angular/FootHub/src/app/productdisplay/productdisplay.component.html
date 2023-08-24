@@ -1,0 +1,131 @@
+<app-navbar></app-navbar>
+<div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <!-- ... Previous code ... -->
+
+          <div class="filter-container">
+            <h4>
+              Filters
+              <!-- <button
+                class="btn btn-secondary d-lg-none"
+                style="padding-top: 0%"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#filterContainer"
+                aria-expanded="false"
+                aria-controls="filterContainer"
+              >
+                &#x2B9F;
+              </button> -->
+            </h4>
+            <!-- <form action="Product display.html"> -->
+              <!-- <form> -->
+              <div class="collapse d-md-block" id="filterContainer">
+                <ul>
+                  <li
+                    class="filter-dropdown"
+                    onclick="toggleFilter('occasion')"
+                  >
+                    Occasion
+                  </li>
+                  <!-- <div >
+                  <ul class="filter-options" id="occasion">
+                    <li><input type="checkbox" /></li>
+                  </ul>
+                  </div> -->
+                  <ul  *ngFor="let product of occasion">
+                    <li>
+                      <label>
+                        <input type="checkbox" (change)="filterProducts($event)" [id]="product.oId">
+                        {{product.oName}}
+                      </label>
+                    </li>
+                  </ul>
+
+                  <li class="filter-dropdown" onclick="toggleFilter('type')">
+                    Type
+                  </li>
+                  <ul class="filter-options" id="type">
+                    <li><input type="checkbox" /> Boots</li>
+                    <li><input type="checkbox" /> Slippers</li>
+                    <li><input type="checkbox" /> Sliders</li>
+                    <li><input type="checkbox" /> Sneakers</li>
+                  </ul>
+                  <ul  *ngFor="let product of productType">
+                    <li>
+                      <label>
+                        <input type="checkbox" (change)="filterProducts($event)" [id]="product.tId">
+                        {{product.tName}}
+                      </label>
+                    </li>
+                  </ul>
+                  <li class="filter-dropdown" onclick="toggleFilter('size')">
+                    Size
+                  </li>
+                  <ul class="filter-options" id="size">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <li><input type="checkbox" /> 5</li>
+                        <li><input type="checkbox" /> 6</li>
+                      </div>
+                      <div class="col-md-6">
+                        <li><input type="checkbox" /> 7</li>
+                        <li><input type="checkbox" /> 8</li>
+                      </div>
+                    </div>
+                  </ul>
+                  <li class="filter-dropdown" onclick="toggleFilter('brand')">
+                    Brand
+                  </li>
+                  <ul class="filter-options" id="brand">
+                    <li><input type="checkbox" /> Nike</li>
+                    <li><input type="checkbox" /> Addidas</li>
+                    <li><input type="checkbox" /> Puma</li>
+                    <li><input type="checkbox" /> Uspa</li>
+                  </ul>
+                  <ul  *ngFor="let product of brand">
+                    <li>
+                      <label>
+                        <input type="checkbox" (change)="filterProducts($event)" [id]="product.bId">
+                        {{product.bName}}
+                      </label>
+                    </li>
+                  </ul>
+                  <!-- Repeat similar structure for other filters -->
+                  <div class="apply-button">
+                    <button class="btn btn-primary" (click)="getFilterDatas()">Apply</button>
+                  </div>
+                </ul>
+              </div>
+            <!-- </form> -->
+          </div>
+          <!-- ... Rest of the code ... -->
+        </div>
+        <div class="col-md-9">
+          <div class="product-card">
+            <div class="card" *ngFor="let product of temp">
+              <a href="Product.html"
+                ><img
+                  src="assets/images/{{product.pImage}}"
+                  class="card-img-top"
+                  alt="Product 1"
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title">{{product.pName}}</h5>
+                <p class="card-text">
+                  {{product.pDisc}}<br>
+                  Price: &#x20B9; {{product.price}}
+                </p>
+                <a href="Product.html" class="btn btn-primary">View</a>
+              </div>
+            </div>
+            <!-- Repeat more product cards for a total of 10 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footers></app-footers>
