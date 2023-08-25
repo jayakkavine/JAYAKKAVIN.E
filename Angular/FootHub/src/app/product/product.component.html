@@ -3,7 +3,7 @@
 
 <div class="content">
     <div class="container" *ngFor="let d of temp">
-        <a href="Product display.html" class="btn btn-secondary back-button">&lt; Back to Products</a>
+        <a class="btn btn-secondary back-button" routerLink="/productdisplay/{{d.categoryName}}">&lt; Back to Products</a>
         <h2>Product Details</h2>
         <div class="row">
             <div class="col-md-4">

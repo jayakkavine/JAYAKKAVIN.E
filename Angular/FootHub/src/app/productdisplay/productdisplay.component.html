@@ -106,7 +106,7 @@
         <div class="col-md-9">
           <div class="product-card">
             <div class="card" *ngFor="let product of temp">
-              <a href="Product.html"
+              <a routerLink="/product/{{product.pId}}"
                 ><img
                   src="assets/images/{{product.pImage}}"
                   class="card-img-top"
@@ -118,7 +118,7 @@
                   {{product.pDisc}}<br>
                   Price: &#x20B9; {{product.price}}
                 </p>
-                <a href="Product.html" class="btn btn-primary">View</a>
+                <a class="btn btn-primary" routerLink="/product/{{product.pId}}">View</a>
               </div>
             </div>
             <!-- Repeat more product cards for a total of 10 -->

@@ -16,9 +16,11 @@ import { ProductComponent } from './product/product.component';
 const routes: Routes = [
   {path:'',component:DashboardComponent },
   {path:'product',component:ProductComponent },
+  {path:'product/:id',component:ProductComponent },
   {path:'productdisplay',component:ProductdisplayComponent },
   {path:'filter',component:ProductFilterComponent },
-  {path:'product-details',component:ProductDetailsFilterComponent }
+  {path:'product-details',component:ProductDetailsFilterComponent },
+  {path:'productdisplay/:id',component:ProductdisplayComponent }
 ];
 
 @NgModule({

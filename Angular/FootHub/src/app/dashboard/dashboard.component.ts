@@ -38,7 +38,7 @@ export class DashboardComponent
 
   assignProducts()
   {
-    for(let i=0;i<3;i++)
+    for(let i=this.data.length - 1;i>=(this.data.length - 3);i--)
     {
       this.temp.push(this.data[i]);
     }

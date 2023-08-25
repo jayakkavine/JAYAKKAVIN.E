@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-productdisplay',
@@ -16,16 +17,18 @@ export class ProductdisplayComponent
   select_categories: any = [];
   filter_data: any =[];
   
+  cat_id: any;
 
-  constructor(private dataService : DataService)
+  constructor(private dataService : DataService, private activatedRoute: ActivatedRoute)
   {
 
   }
   ngOnInit(): void{
-    this.getOccasions();
-    this.getBrand();
-    this.getProductType();
+    
     this.getProduct();
+
+
+    this.cat_id = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
   getOccasions()
@@ -33,7 +36,6 @@ export class ProductdisplayComponent
     this.dataService.getOccasions().subscribe(response=>
       {
           this.occasion = response;
-          console.log(this.occasion);
       });
   }
 
@@ -58,19 +60,30 @@ export class ProductdisplayComponent
   {
     this.dataService.getProduct().subscribe(response =>
       {
+        this.getOccasions();
+        this.getBrand();
+        this.getProductType();
           this.data = response;
-          this.temp = response;
+          this.assignProducts();
           console.log(this.data);
+          // this.temp = response;
+          // console.log(this.temp);
       });
   }
 
-  // assignOccasions()
-  // {
-  //   for(let i=0;i<this.occasion.length;i++)
-  //   {
-  //     this.temp.push(this.occasion[i]);
-  //   }
-  // }
+  assignProducts()
+  {
+    for(let i=0;i<this.data.length;i++)
+    {
+      if(this.data[i].categoryName == this.cat_id)
+      {
+        this.temp.push(this.data[i]);
+        console.log(this.temp);
+      }
+      console.log(this.temp);
+      console.log(this.cat_id);
+    }
+  }
 
 
   getFilterData()
@@ -82,7 +95,7 @@ export class ProductdisplayComponent
     const data = {
       select_categories : pars
     }
-      console.log(this.select_categories);
+      
     this.dataService.getFilteredProducts(data).subscribe(response =>
       {
           this.filter_data = response;
@@ -116,7 +129,7 @@ export class ProductdisplayComponent
         if(data === id)
         {
           const index = this.select_categories.indexOf(data);
-          console.log(index);
+          
           this.select_categories.splice(index, 1); 
         }
       }
@@ -133,14 +146,14 @@ export class ProductdisplayComponent
       {
         if(this.temp.length == 0)
         {
-          if(this.select_categories[j] == this.data[i].oId)
+          if(this.select_categories[j] == this.data[i].oId && this.data[i].categoryName == this.cat_id)
           {
           this.temp.push(this.data[i]);
           }
         }
         else
         {
-          if(this.select_categories[j] == this.data[i].oId)
+          if(this.select_categories[j] == this.data[i].oId && this.data[i].categoryName == this.cat_id)
           {
           let a = 0;
           for(let k=0;k<this.temp.length;k++)
@@ -152,7 +165,7 @@ export class ProductdisplayComponent
           }
           if(a==0)
           {
-            console.log("a is 2");
+            
             this.temp.push(this.data[i]);
           }
         }
@@ -162,14 +175,14 @@ export class ProductdisplayComponent
       {
         if(this.temp.length == 0)
         {
-          if(this.select_categories[j] == this.data[i].bId)
+          if(this.select_categories[j] == this.data[i].bId && this.data[i].categoryName == this.cat_id)
           {
           this.temp.push(this.data[i]);
           }
         }
         else
         {
-          if(this.select_categories[j] == this.data[i].bId)
+          if(this.select_categories[j] == this.data[i].bId && this.data[i].categoryName == this.cat_id)
           {
           let a = 0;
           for(let k=0;k<this.temp.length;k++)
@@ -181,7 +194,7 @@ export class ProductdisplayComponent
           }
           if(a==0)
           {
-            console.log("a is 2");
+            
             this.temp.push(this.data[i]);
           }
         }
@@ -191,14 +204,14 @@ export class ProductdisplayComponent
       {
         if(this.temp.length == 0)
         {
-          if(this.select_categories[j] == this.data[i].tId)
+          if(this.select_categories[j] == this.data[i].tId && this.data[i].categoryName == this.cat_id)
           {
           this.temp.push(this.data[i]);
           }
         }
         else
         {
-          if(this.select_categories[j] == this.data[i].tId)
+          if(this.select_categories[j] == this.data[i].tId && this.data[i].categoryName == this.cat_id)
           {
           let a = 0;
           for(let k=0;k<this.temp.length;k++)
@@ -210,7 +223,7 @@ export class ProductdisplayComponent
           }
           if(a==0)
           {
-            console.log("a is 2");
+            
             this.temp.push(this.data[i]);
           }
         }

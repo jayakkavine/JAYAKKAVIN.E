@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -17,25 +18,27 @@ export class ProductComponent
   brand_name = '';
   product_type = '';
   
-
-  constructor(private dataService : DataService)
+  cat_id: any;
+  constructor(private dataService : DataService, private activatedRoute: ActivatedRoute)
   {
-
-  }
-  ngOnInit(): void{
     this.getOccasions();
     this.getBrand();
-    this.getProductType();
-    this.getProduct();
     
+    this.cat_id = this.activatedRoute.snapshot.paramMap.get('id');
+  }
+  ngOnInit(): void{
+    
+    this.getProduct();
+    this.getProductType();
   }
 
   getProduct()
   {
     this.dataService.getProduct().subscribe(response=>
       {
-          this.data = response;
-          this.assignProducts();
+        this.data = response;
+        
+        this.assignProducts();
       });
   }
 
@@ -68,30 +71,41 @@ export class ProductComponent
   {
     for(let i=0;i<this.data.length;i++)
     {
-      if(this.data[i].pId == 9)
+      if(this.data[i].pId == this.cat_id)
       {
         this.temp.push(this.data[i]);
       }
     }
+    console.log(this.temp);
     for(let i=0;i<this.occasion.length;i++)
     {
       if(this.occasion[i].oId == this.temp[0].oId)
+      {
         this.occasion_name = this.occasion[i].oName;
+      }
+      console.log(this.occasion[i]);
     }
 
     for(let i=0;i<this.brand.length;i++)
     {
       if(this.brand[i].bId == this.temp[0].bId)
+      {
         this.brand_name = this.brand[i].bName;
+      }
+      console.log(this.brand[i]);
     }
 
     for(let i=0;i<this.productType.length;i++)
     {
       if(this.productType[i].tId == this.temp[0].tId)
+      {
         this.product_type = this.productType[i].tName;
-      
+      }
+      console.log(this.productType[i]);
     }
-    console.log(this.temp);
+    
+    
+    
   }
   
 }
