@@ -65,9 +65,6 @@ export class ProductdisplayComponent
         this.getProductType();
           this.data = response;
           this.assignProducts();
-          console.log(this.data);
-          // this.temp = response;
-          // console.log(this.temp);
       });
   }
 
@@ -96,10 +93,10 @@ export class ProductdisplayComponent
       select_categories : pars
     }
       
-    this.dataService.getFilteredProducts(data).subscribe(response =>
-      {
-          this.filter_data = response;
-      });
+    // this.dataService.getFilteredProducts(data).subscribe(response =>
+    //   {
+    //       this.filter_data = response;
+    //   });
   }
 
   productCheck()
@@ -223,7 +220,6 @@ export class ProductdisplayComponent
           }
           if(a==0)
           {
-            
             this.temp.push(this.data[i]);
           }
         }
@@ -242,7 +238,7 @@ export class ProductdisplayComponent
       // }
 
     }
-    console.log(this.temp);
+    
 }
 
 

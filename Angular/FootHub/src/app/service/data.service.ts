@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn:'root'
@@ -34,15 +35,10 @@ export class DataService
         return this.http.get("http://localhost:5068/api/CRUD/ProductTable")
     }
 
-    getProducts()
-    {
-        return this.http.get("http://localhost:5172/api/Student")
-    }
-
-    getFilteredProducts(data: any)
-    {
-        return this.http.post(`http://localhost:5172/api/Student/Get`,data);
-    }
+//     public getProductById(id:number):Observable<any>
+//   {
+//     return this.http.get(`http://localhost:5172/api/Student/${id}`);                       //.pipe(retry(0), catchError(this.handleError));
+//   }
 
     getDashboard()
     {

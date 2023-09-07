@@ -1,0 +1,48 @@
+
+
+<div class="card card p-5" style="width: 100%">
+    <table class="table table-bordered table-striped data-table1" style="min-width: 100%">
+    
+<tbody>
+    <tr>
+        <th>Fund House</th>
+        <th>Scheme Type</th>
+        <th>Details</th>
+</tr>
+    <tr *ngIf="spfund">
+       <td> {{spfund.meta.fund_house}}</td>
+       <td> {{spfund.meta.scheme_type}}</td>
+       <td> {{spfund.meta.scheme_category}}</td>
+    </tr>
+</tbody>
+</table>
+</div>
+<div class="card card p-5" style="width: 100%">
+    <table class="table table-bordered table-striped data-table1" style="min-width: 100%">
+
+<tbody>
+    <tr>
+        <th>Date</th>
+        <th>Nav</th>
+    
+</tr>
+    <tr *ngFor="let value of spfund.data | paginate
+    : {
+        itemsPerPage:   10,
+        currentPage: page,
+        totalItems: count
+      };
+let i = index">
+       <td> {{value.date}}</td>
+       <td> {{value.nav}}</td>
+   
+    </tr>
+</tbody>
+</table>
+<pagination-controls
+previousLabel="Prev"
+nextLabel="Next"
+(pageChange)="onTableDataChange($event)"
+>
+</pagination-controls>
+</div>

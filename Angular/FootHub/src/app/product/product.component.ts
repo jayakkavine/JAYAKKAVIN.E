@@ -23,14 +23,21 @@ export class ProductComponent
   {
     this.getOccasions();
     this.getBrand();
-    
     this.cat_id = this.activatedRoute.snapshot.paramMap.get('id');
+    //this.getProductById();
   }
   ngOnInit(): void{
-    
     this.getProduct();
     this.getProductType();
   }
+
+  // getProductById()
+  // {
+  //   this.dataService.getProductById(this.cat_id).subscribe(response =>
+  //     {
+  //       this.data = response;
+  //     })
+  // }
 
   getProduct()
   {
@@ -76,14 +83,12 @@ export class ProductComponent
         this.temp.push(this.data[i]);
       }
     }
-    console.log(this.temp);
     for(let i=0;i<this.occasion.length;i++)
     {
       if(this.occasion[i].oId == this.temp[0].oId)
       {
         this.occasion_name = this.occasion[i].oName;
       }
-      console.log(this.occasion[i]);
     }
 
     for(let i=0;i<this.brand.length;i++)

@@ -15,7 +15,7 @@ namespace FootHub.Controllers
         {
             _icrud = icrud;
         }
-
+        /*
         [HttpPost("OcassionTable")]
         public async Task<ActionResult<List<OcassionTable>>> AddOcassion(OcassionTable ocassion)
         {
@@ -26,7 +26,7 @@ namespace FootHub.Controllers
             }
             return Ok(ocassions);
         }
-
+        */
         [HttpGet("OcassionTable")]
         public async Task<ActionResult<List<OcassionTable>>> GetOcassion()
         {
@@ -37,7 +37,7 @@ namespace FootHub.Controllers
             }
             return Ok(ocassions);
         }
-
+        /*
         [HttpPut("OcassionTable")]
         public async Task<ActionResult<OcassionTable>> UpdateOcassion(int o_id, OcassionTable ocassion)
         {
@@ -84,7 +84,7 @@ namespace FootHub.Controllers
             }
             return Ok(brands);
         }
-
+        */
         [HttpGet("BrandTable")]
         public async Task<ActionResult<List<BrandTable>>> GetBrand()
         {
@@ -95,7 +95,7 @@ namespace FootHub.Controllers
             }
             return Ok(ocassions);
         }
-
+        /*
         [HttpPut("BrandTable")]
         public async Task<ActionResult<BrandTable>> UpdateBrand(int o_id, BrandTable brand)
         {
@@ -142,7 +142,7 @@ namespace FootHub.Controllers
             }
             return Ok(ocassions);
         }
-
+        */
         [HttpGet("ProductTable")]
         public async Task<ActionResult<List<ProductTable>>> GetProduct()
         {
@@ -154,6 +154,19 @@ namespace FootHub.Controllers
             return Ok(ocassions);
         }
 
+
+        [HttpGet("ProductTableBy ID")]
+        public async Task<ActionResult<List<ProductTable>>> GetProductById(int id)
+        {
+            var ocassions = await _icrud.GetProductById(id);
+            if (ocassions == null)
+            {
+                return NotFound();
+            }
+            return Ok(ocassions);
+        }
+
+        /*
         [HttpPut("ProductTable")]
         public async Task<ActionResult<ProductTable>> UpdateProduct(int o_id, ProductTable product)
         {
@@ -199,7 +212,7 @@ namespace FootHub.Controllers
             }
             return Ok(ocassions);
         }
-
+        */
         [HttpGet("ProductType")]
         public async Task<ActionResult<List<ProductType>>> GetProductType()
         {
@@ -210,7 +223,7 @@ namespace FootHub.Controllers
             }
             return Ok(ocassions);
         }
-
+        /*
         [HttpPut("ProductType")]
         public async Task<ActionResult<ProductType>> UpdateProductType(int o_id, ProductType ocassion)
         {
@@ -244,6 +257,6 @@ namespace FootHub.Controllers
             }
 
         }
-
+        */
     }
 }

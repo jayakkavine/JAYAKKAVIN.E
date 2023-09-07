@@ -1,0 +1,82 @@
+<!-- 
+
+<div class="card card p-5" style="width: 100%">
+    <table class="table table-bordered  data-table1" style="min-width: 100%">
+    
+<tbody>
+    <tr>
+        <th style="background-color: darkgrey;">Fund House</th>
+        <th  style="background-color: darkgrey;">Scheme Type</th>
+        <th style="background-color: darkgrey;">Details</th>
+</tr>
+    <tr *ngIf="spfund">
+       <td> {{spfund.meta.fund_house}}</td>
+       <td> {{spfund.meta.scheme_type}}</td>
+       <td> {{spfund.meta.scheme_category}}</td>
+    </tr>
+</tbody>
+</table>
+</div>
+<div class="card card p-5" style="width: 100%">
+    <table class="table table-bordered  data-table1" style="min-width: 100%">
+
+<tbody>
+    <tr>
+        <th style="background-color: darkgrey;">Date</th>
+        <th style="background-color: darkgrey;">Nav</th>
+    
+</tr>
+    <tr *ngFor="let value of spfund.data | paginate
+    : {
+        itemsPerPage:   30,
+        currentPage: page,
+        totalItems: count
+      };
+let i = index">
+       <td> {{value.date}}</td>
+       <td> {{value.nav}}</td>
+   
+    </tr>
+</tbody>
+</table>
+<pagination-controls
+previousLabel="Prev"
+nextLabel="Next"
+(pageChange)="onTableDataChange($event)"
+>
+</pagination-controls>
+</div> -->
+
+<div class="card card p-5" style="width: 100%">
+    <table class="table table-bordered data-table1" style="min-width: 100%; background-color: lightblue;">
+        <tbody>
+            <tr>
+                <th class="bg-primary" style="color: white;">Fund House</th>
+                <th class="bg-primary" style="color: white;">Scheme Type</th>
+                <th class="bg-primary" style="color: white;">Details</th>
+            </tr>
+            <tr *ngIf="spfund">
+                <td>{{ spfund.meta.fund_house }}</td>
+                <td>{{ spfund.meta.scheme_type }}</td>
+                <td>{{ spfund.meta.scheme_category }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="card card p-5" style="width: 100%">
+    <table class="table table-bordered data-table1" style="min-width: 100%; background-color: lightgreen;">
+        <tbody>
+            <tr>
+                <th class="bg-primary" style="color: white;">Date</th>
+                <th class="bg-primary" style="color: white;">Nav</th>
+            </tr>
+            <tr *ngFor="let value of spfund.data | paginate: { itemsPerPage: 30, currentPage: page, totalItems: count }; let i = index">
+                <td>{{ value.date }}</td>
+                <td>{{ value.nav }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)" style="display: flex;
+    justify-content: center;"></pagination-controls>
+</div>

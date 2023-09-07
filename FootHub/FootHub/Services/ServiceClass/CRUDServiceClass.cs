@@ -2,7 +2,9 @@
 using FootHub.Context;
 using FootHub.Models;
 using FootHub.Services.Interface;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace FootHub.Services.ServiceClass
 {
@@ -14,20 +16,20 @@ namespace FootHub.Services.ServiceClass
         {
             _context = context;
         }
-
+        /*
         public async Task<List<OcassionTable>> AddOcassion(OcassionTable ocassion)
         {
             _context.OcassionTables.Add(ocassion);
             await _context.SaveChangesAsync();
             return await _context.OcassionTables.ToListAsync();
         }
-
+        */
         public async Task<List<OcassionTable>> GetOcassions()
         {
             var response = await _context.OcassionTables.Where(o => o.IsAvailable == 1).ToListAsync();
             return response;
         }
-
+        /*
         public async Task<List<OcassionTable>> UpdateOcassion(int o_id, OcassionTable ocassion)
         {
             var response = await _context.OcassionTables.FindAsync(o_id);
@@ -52,12 +54,12 @@ namespace FootHub.Services.ServiceClass
             await _context.SaveChangesAsync();
             return await _context.BrandTables.ToListAsync();
         }
-
+        */
         public async Task<List<BrandTable>> GetBrand()
         {
             return await _context.BrandTables.ToListAsync();
         }
-
+        /*
         public async Task<List<BrandTable>> UpdateBrand(int b_id, BrandTable brand)
         {
             var response = await _context.BrandTables.FindAsync(b_id);
@@ -82,12 +84,59 @@ namespace FootHub.Services.ServiceClass
             await _context.SaveChangesAsync();
             return await _context.ProductTables.ToListAsync();
         }
-
+        */
         public async Task<List<ProductTable>> GetProduct()
         {
             return await _context.ProductTables.ToListAsync();
         }
 
+
+
+        //public async Task<List<ProductTable>> GetProductById(int id)
+        //{
+        //    var query = await _context.ProductTables
+        //        .Include(p => p.OccasionTable)
+        //        .Include(p => p.Brand)
+        //        .Include(p => p.ProductType)
+        //        .Select(p => new
+        //        {
+        //            p.PId,
+        //            p.PName,
+        //            p.PDisc,
+        //            p.Size,
+        //            p.Price,
+        //            p.TotalStock,
+        //            p.PImage,
+        //            OccasionName = p.Occasion.OName,
+        //            BrandName = p.Brand.BName,
+        //            TypeName = p.ProductType.TName
+        //        })
+        //        .ToListAsync();
+
+        //    return query;
+        //}
+        public async Task<LinkModel> GetProductById(int id)
+        {
+                var query = await _context.ProductTables.Include(p => p.PId == id)
+                    .Select(p => new LinkModel
+                    {
+                        PId=p.PId,
+                        PName=p.PName,
+                        PDisc = p.PDisc,
+                        Size = p.Size,
+                        Price = p.Price,
+                        TotalStock = p.TotalStock,
+                        PImage = p.PImage,
+                        OName = _context.OcassionTables.Where(id => id.OId == p.OId).Select(id=>id.OName).FirstOrDefault(),
+                        TName = _context.ProductTypes.Where(id => id.TId == p.TId).Select(id => id.TName).FirstOrDefault(),
+                        BName = _context.BrandTables.Where(id => id.BId == p.BId).Select(id => id.BName).FirstOrDefault(),
+                    }).FirstOrDefaultAsync();
+
+            return query;
+        }
+
+
+        /*
         public async Task<List<ProductTable>> UpdateProduct(int p_id, ProductTable product)
         {
             var response = await _context.ProductTables.FindAsync(p_id);
@@ -113,12 +162,12 @@ namespace FootHub.Services.ServiceClass
             await _context.SaveChangesAsync();
             return await _context.ProductTypes.ToListAsync();
         }
-
+        */
         public async Task<List<ProductType>> GetProductType()
         {
             return await _context.ProductTypes.ToListAsync();
         }
-
+        /*
         public async Task<List<ProductType>> UpdateProductType(int p_id, ProductType productType)
         {
             var response = await _context.ProductTypes.FindAsync(p_id);
@@ -136,7 +185,7 @@ namespace FootHub.Services.ServiceClass
             return await _context.ProductTypes.ToListAsync();
 
         }
-
+        */
         
 
     }

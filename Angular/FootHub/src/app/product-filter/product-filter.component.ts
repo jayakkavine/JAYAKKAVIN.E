@@ -21,17 +21,17 @@ export class ProductFilterComponent {
 
   }
   ngOnInit(): void{
-    this.getProducts();
+    //this.getProducts();
   }
 
-  getProducts()
-  {
-    this.dataService.getProducts().subscribe(response=>
-      {
-          this.data = response;
-          console.log(this.data);
-      });
-  }
+  // getProducts()
+  // {
+  //   this.dataService.getProducts().subscribe(response=>
+  //     {
+  //         this.data = response;
+  //         console.log(this.data);
+  //     });
+  // }
 
 
   getFilterData()
@@ -46,10 +46,10 @@ export class ProductFilterComponent {
     }
     
       console.log(data);
-    this.dataService.getFilteredProducts(data).subscribe(response =>
-      {
-          this.filter_data = response;
-      });
+    // this.dataService.getFilteredProducts(data).subscribe(response =>
+    //   {
+    //       this.filter_data = response;
+    //   });
   }
 
   productCheck()
